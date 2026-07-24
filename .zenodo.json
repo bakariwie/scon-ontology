@@ -1,0 +1,20 @@
+{
+  "title": "SCON: School Counselling Ontology Network",
+  "description": "A modular, BFO-grounded, reasoning-enabled OWL 2 DL ontology for comprehensive counselling across the academic, career, and social-emotional domains in school and higher-education settings, engineered to support intelligent counselling systems.",
+  "version": "1.1.0",
+  "license": "CC-BY-4.0",
+  "upload_type": "software",
+  "keywords": [
+    "ontology", "OWL", "Basic Formal Ontology", "school counselling",
+    "ASCA National Model", "Description Logic", "intelligent counselling systems",
+    "neuro-symbolic", "FAIR"
+  ],
+  "creators": [
+    {"name": "Bakariwie, Amiru", "orcid": "0009-0009-8471-2091",
+     "affiliation": "University of Business and Integrated Development Studies (UBIDS), Wa, Ghana"},
+    {"name": "Weyori, Benjamin A.", "orcid": "0000-0001-5422-4251",
+     "affiliation": "University of Energy and Natural Resources (UENR), Sunyani, Ghana"},
+    {"name": "Afriyie, Yaw", "orcid": "0000-0003-4821-5804",
+     "affiliation": "University of Business and Integrated Development Studies (UBIDS), Wa, Ghana"}
+  ]
+}
