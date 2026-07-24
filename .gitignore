@@ -1,0 +1,21 @@
+# Protégé helper / backup files
+catalog-v001.xml
+*.owl.bak
+*.owl~
+*~
+*.tmp
+*.properties
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Build / documentation output (regenerated)
+/build/
+*.log
+
+# Reasoner / tooling caches
+.robot/
