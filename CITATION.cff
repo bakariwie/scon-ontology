@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+title: "SCON: School Counselling Ontology Network"
+message: "If you use this ontology, please cite it as below."
+type: software
+authors:
+  - family-names: Bakariwie
+    given-names: Amiru
+    orcid: "https://orcid.org/0009-0009-8471-2091"
+    affiliation: "University of Business and Integrated Development Studies (UBIDS), Wa, Ghana"
+    email: abakariwie@ubids.edu.gh
+  - family-names: Weyori
+    given-names: Benjamin A.
+    orcid: "https://orcid.org/0000-0001-5422-4251"
+    affiliation: "University of Energy and Natural Resources (UENR), Sunyani, Ghana"
+  - family-names: Afriyie
+    given-names: Yaw
+    orcid: "https://orcid.org/0000-0003-4821-5804"
+    affiliation: "University of Business and Integrated Development Studies (UBIDS), Wa, Ghana"
+version: "1.1.0"
+license: CC-BY-4.0
+repository-code: "https://github.com/bakariwie/scon-ontology"
+url: "https://github.com/bakariwie/scon-ontology"
+keywords:
+  - ontology
+  - OWL
+  - Basic Formal Ontology
+  - school counselling
+  - ASCA National Model
+  - Description Logic
+  - intelligent counselling systems
+  - neuro-symbolic
+abstract: >-
+  SCON is a modular, BFO-grounded, reasoning-enabled OWL 2 DL ontology for
+  comprehensive counselling across the academic, career, and social-emotional
+  domains in school and higher-education settings, engineered to support
+  intelligent counselling systems.
+preferred-citation:
+  type: article
+  title: >-
+    Ontology-based knowledge representation for school counselling: A systematic
+    literature review of ontology artefacts and semantic web technologies
+  authors:
+    - family-names: Bakariwie
+      given-names: Amiru
+    - family-names: Weyori
+      given-names: Benjamin A.
+    - family-names: Afriyie
+      given-names: Yaw
+  journal: "Discover Artificial Intelligence"
+  year: 2026
+  notes: "Advance online publication."
