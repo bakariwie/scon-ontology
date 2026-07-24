@@ -1,0 +1,51 @@
+name: Ontology CI
+
+# Validates SCON on every push and pull request:
+#   * checks the ontology is consistent (HermiT via ROBOT)
+#   * runs a ROBOT report for quality pitfalls
+# ROBOT: http://robot.obolibrary.org/
+
+on:
+  push:
+    paths: ['**/*.owl', '**/*.rdf']
+  pull_request:
+    paths: ['**/*.owl', '**/*.rdf']
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install ROBOT
+        run: |
+          curl -L -o robot.jar \
+            https://github.com/ontodev/robot/releases/latest/download/robot.jar
+          printf '#!/bin/bash\njava -jar "%s/robot.jar" "$@"\n' "$PWD" > robot
+          chmod +x robot
+          echo "$PWD" >> "$GITHUB_PATH"
+
+      - name: Locate ontology file
+        id: find
+        run: echo "owl=$(ls *.owl *.rdf 2>/dev/null | head -n1)" >> "$GITHUB_OUTPUT"
+
+      - name: Reason (consistency + coherence check)
+        run: robot reason --reasoner hermit --input "${{ steps.find.outputs.owl }}" --output /tmp/reasoned.owl
+
+      - name: ROBOT report (quality pitfalls)
+        run: robot report --input "${{ steps.find.outputs.owl }}" --output report.tsv --fail-on ERROR
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-report
+          path: report.tsv
