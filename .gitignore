@@ -1,0 +1,32 @@
+# Protégé and reasoner working files
+*.owl.bak
+*.rdf.bak
+*.rdf.backup
+*~
+catalog-v001.xml
+.protege/
+
+# Credentials and connection profiles — never commit these
+*.properties
+*.env
+.env
+secrets/
+
+# Operating system and editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+
+# Python tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Build and export artefacts
+/build/
+/dist/
+*.log
