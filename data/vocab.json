@@ -1,0 +1,1249 @@
+{
+ "prefix": "http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#",
+ "classes": {
+  "ProperInterval": [],
+  "Instant": [],
+  "CounsellingDomain": [],
+  "AcademicDevelopment": [
+   "CounsellingDomain"
+  ],
+  "CareerDevelopment": [
+   "CounsellingDomain"
+  ],
+  "SocialEmotionalDevelopment": [
+   "CounsellingDomain"
+  ],
+  "Person": [],
+  "Student": [
+   "Person"
+  ],
+  "Counsellor": [
+   "Person"
+  ],
+  "AcademicAdvisor": [
+   "Person"
+  ],
+  "CareerAdvisor": [
+   "Person"
+  ],
+  "Teacher": [
+   "Person"
+  ],
+  "Parent": [
+   "Person"
+  ],
+  "Guardian": [
+   "Person"
+  ],
+  "SchoolAdministrator": [
+   "Person"
+  ],
+  "Psychologist": [
+   "Person"
+  ],
+  "Psychiatrist": [
+   "Person"
+  ],
+  "SocialWorker": [
+   "Person"
+  ],
+  "MedicalOfficer": [
+   "Person"
+  ],
+  "Mentor": [
+   "Person"
+  ],
+  "Employer": [
+   "Person"
+  ],
+  "CommunityVolunteer": [
+   "Person"
+  ],
+  "SchoolStudent": [
+   "Student"
+  ],
+  "HigherEducationStudent": [
+   "Student"
+  ],
+  "UndergraduateStudent": [
+   "HigherEducationStudent"
+  ],
+  "PostgraduateStudent": [
+   "HigherEducationStudent"
+  ],
+  "InternationalStudent": [
+   "HigherEducationStudent"
+  ],
+  "FirstGenerationStudent": [
+   "HigherEducationStudent"
+  ],
+  "MatureStudent": [
+   "HigherEducationStudent"
+  ],
+  "DistanceLearner": [
+   "HigherEducationStudent"
+  ],
+  "SchoolCounsellor": [
+   "Counsellor"
+  ],
+  "HigherEducationCounsellor": [
+   "Counsellor"
+  ],
+  "PeerCounsellor": [
+   "Counsellor"
+  ],
+  "Lecturer": [
+   "Teacher"
+  ],
+  "Professor": [
+   "Teacher"
+  ],
+  "Principal": [
+   "SchoolAdministrator"
+  ],
+  "ViceChancellor": [
+   "SchoolAdministrator"
+  ],
+  "AlumniMentor": [
+   "Mentor"
+  ],
+  "Organisation": [],
+  "School": [
+   "Organisation"
+  ],
+  "HigherEducationInstitution": [
+   "Organisation"
+  ],
+  "MinistryOfEducation": [
+   "Organisation"
+  ],
+  "GuidanceAndCounsellingUnit": [
+   "Organisation"
+  ],
+  "CounsellingCentre": [
+   "Organisation"
+  ],
+  "HealthFacility": [
+   "Organisation"
+  ],
+  "NGO": [
+   "Organisation"
+  ],
+  "Company": [
+   "Organisation"
+  ],
+  "ScholarshipAgency": [
+   "Organisation"
+  ],
+  "ProfessionalAssociation": [
+   "Organisation"
+  ],
+  "ExternalAgency": [
+   "Organisation"
+  ],
+  "AdvisoryCouncil": [
+   "Organisation"
+  ],
+  "AcademicDepartment": [
+   "Organisation"
+  ],
+  "University": [
+   "HigherEducationInstitution"
+  ],
+  "College": [
+   "HigherEducationInstitution"
+  ],
+  "CommunityMentalHealthProvider": [
+   "ExternalAgency"
+  ],
+  "ChildProtectionAgency": [
+   "ExternalAgency"
+  ],
+  "Facility": [],
+  "Classroom": [
+   "Facility"
+  ],
+  "CounsellingOffice": [
+   "Facility"
+  ],
+  "PsychologyLaboratory": [
+   "Facility"
+  ],
+  "ComputerLaboratory": [
+   "Facility"
+  ],
+  "Library": [
+   "Facility"
+  ],
+  "HealthCentre": [
+   "Facility"
+  ],
+  "ExaminationHall": [
+   "Facility"
+  ],
+  "PhysicalArtefact": [],
+  "Computer": [
+   "PhysicalArtefact"
+  ],
+  "MobilePhone": [
+   "PhysicalArtefact"
+  ],
+  "Book": [
+   "PhysicalArtefact"
+  ],
+  "Whiteboard": [
+   "PhysicalArtefact"
+  ],
+  "StudentFile": [
+   "PhysicalArtefact"
+  ],
+  "InformationCarrier": [
+   "PhysicalArtefact"
+  ],
+  "PrintedReport": [
+   "InformationCarrier"
+  ],
+  "StudentPortfolio": [
+   "InformationCarrier"
+  ],
+  "Certificate": [
+   "InformationCarrier"
+  ],
+  "CounsellingRobot": [
+   "PhysicalArtefact"
+  ],
+  "SociallyAssistiveRobot": [
+   "CounsellingRobot"
+  ],
+  "StudentRole": [],
+  "CounsellorRole": [],
+  "AdvisorRole": [],
+  "GuardianRole": [],
+  "MandatedReporterRole": [],
+  "CounsellingClientRole": [],
+  "CounsellingProviderRole": [],
+  "ReferralRecipientRole": [],
+  "MentorRole": [],
+  "MenteeRole": [],
+  "JobApplicantRole": [],
+  "InternRole": [],
+  "EmployeeRole": [],
+  "EntrepreneurRole": [],
+  "LearnerRole": [],
+  "TutorRole": [],
+  "ExaminerRole": [],
+  "InvigilatorRole": [],
+  "ClassPrefectRole": [],
+  "ClubMemberRole": [],
+  "FreshmanRole": [
+   "StudentRole"
+  ],
+  "FinalYearStudentRole": [
+   "StudentRole"
+  ],
+  "AcademicDisposition": [],
+  "SocialEmotionalDisposition": [],
+  "CareerDisposition": [],
+  "BehaviouralRiskDisposition": [],
+  "LearningReadiness": [
+   "AcademicDisposition"
+  ],
+  "AcademicMotivation": [
+   "AcademicDisposition"
+  ],
+  "StudyHabit": [
+   "AcademicDisposition"
+  ],
+  "Creativity": [
+   "AcademicDisposition"
+  ],
+  "CriticalThinking": [
+   "AcademicDisposition"
+  ],
+  "Persistence": [
+   "AcademicDisposition"
+  ],
+  "SelfDiscipline": [
+   "AcademicDisposition"
+  ],
+  "TimeManagementAbility": [
+   "AcademicDisposition"
+  ],
+  "Empathy": [
+   "SocialEmotionalDisposition"
+  ],
+  "EmotionalIntelligence": [
+   "SocialEmotionalDisposition"
+  ],
+  "Resilience": [
+   "SocialEmotionalDisposition"
+  ],
+  "SelfEfficacy": [
+   "SocialEmotionalDisposition"
+  ],
+  "Confidence": [
+   "SocialEmotionalDisposition"
+  ],
+  "Leadership": [
+   "SocialEmotionalDisposition"
+  ],
+  "Cooperation": [
+   "SocialEmotionalDisposition"
+  ],
+  "Adaptability": [
+   "SocialEmotionalDisposition"
+  ],
+  "StressTolerance": [
+   "SocialEmotionalDisposition"
+  ],
+  "EmotionalStability": [
+   "SocialEmotionalDisposition"
+  ],
+  "CareerInterest": [
+   "CareerDisposition"
+  ],
+  "EntrepreneurialMindset": [
+   "CareerDisposition"
+  ],
+  "Employability": [
+   "CareerDisposition"
+  ],
+  "ProfessionalEthics": [
+   "CareerDisposition"
+  ],
+  "WorkReadiness": [
+   "CareerDisposition"
+  ],
+  "Aptitude": [
+   "CareerDisposition"
+  ],
+  "WorkValue": [
+   "CareerDisposition"
+  ],
+  "Aggression": [
+   "BehaviouralRiskDisposition"
+  ],
+  "TruancyTendency": [
+   "BehaviouralRiskDisposition"
+  ],
+  "SubstanceAbuseRisk": [
+   "BehaviouralRiskDisposition"
+  ],
+  "BullyingTendency": [
+   "BehaviouralRiskDisposition"
+  ],
+  "AnxietyVulnerability": [
+   "BehaviouralRiskDisposition"
+  ],
+  "DepressionVulnerability": [
+   "BehaviouralRiskDisposition"
+  ],
+  "SuicidalIdeationRisk": [
+   "BehaviouralRiskDisposition"
+  ],
+  "Skill": [],
+  "Competency": [],
+  "SocialEmotionalCompetency": [
+   "Competency"
+  ],
+  "SelfAwareness": [
+   "SocialEmotionalCompetency"
+  ],
+  "SelfManagement": [
+   "SocialEmotionalCompetency"
+  ],
+  "SocialAwareness": [
+   "SocialEmotionalCompetency"
+  ],
+  "RelationshipSkills": [
+   "SocialEmotionalCompetency"
+  ],
+  "ResponsibleDecisionMaking": [
+   "SocialEmotionalCompetency"
+  ],
+  "StudentIssue": [],
+  "AcademicIssue": [
+   "StudentIssue"
+  ],
+  "CareerIndecision": [
+   "StudentIssue"
+  ],
+  "SocialEmotionalIssue": [
+   "StudentIssue"
+  ],
+  "SafeguardingConcern": [
+   "StudentIssue"
+  ],
+  "AcademicUnderachievement": [
+   "AcademicIssue"
+  ],
+  "CourseFailure": [
+   "AcademicIssue"
+  ],
+  "StudySkillsDeficit": [
+   "AcademicIssue"
+  ],
+  "AcademicProbation": [
+   "AcademicIssue"
+  ],
+  "RetentionRisk": [
+   "AcademicIssue"
+  ],
+  "DropoutRisk": [
+   "AcademicIssue"
+  ],
+  "MentalHealthConcern": [
+   "SocialEmotionalIssue"
+  ],
+  "AdjustmentDifficulty": [
+   "SocialEmotionalIssue"
+  ],
+  "Homesickness": [
+   "SocialEmotionalIssue"
+  ],
+  "AcculturativeStress": [
+   "SocialEmotionalIssue"
+  ],
+  "SocialIsolation": [
+   "SocialEmotionalIssue"
+  ],
+  "RelationshipDifficulty": [
+   "SocialEmotionalIssue"
+  ],
+  "FamilyConflict": [
+   "SocialEmotionalIssue"
+  ],
+  "PeerConflict": [
+   "SocialEmotionalIssue"
+  ],
+  "GriefAndLoss": [
+   "SocialEmotionalIssue"
+  ],
+  "FinancialHardship": [
+   "SocialEmotionalIssue"
+  ],
+  "TestAnxiety": [
+   "SocialEmotionalIssue"
+  ],
+  "ExaminationStress": [
+   "SocialEmotionalIssue"
+  ],
+  "AbuseConcern": [
+   "SafeguardingConcern"
+  ],
+  "NeglectConcern": [
+   "SafeguardingConcern"
+  ],
+  "ViolenceRisk": [
+   "SafeguardingConcern"
+  ],
+  "CounsellingFunction": [],
+  "TeachingFunction": [],
+  "AssessmentFunction": [],
+  "RecommendationFunction": [],
+  "MonitoringFunction": [],
+  "ReferralFunction": [],
+  "ReportingFunction": [],
+  "ReasoningFunction": [],
+  "GradePointAverage": [],
+  "ExaminationScore": [],
+  "AttendanceRate": [],
+  "AcademicPerformance": [],
+  "BehaviourRating": [],
+  "ConductScore": [],
+  "AnxietyLevel": [],
+  "StressLevel": [],
+  "HappinessLevel": [],
+  "EmotionalState": [],
+  "SelfEsteem": [],
+  "EmployabilityScore": [],
+  "SkillProficiency": [],
+  "CompetencyLevel": [],
+  "PersonalityTrait": [],
+  "Openness": [
+   "PersonalityTrait"
+  ],
+  "Conscientiousness": [
+   "PersonalityTrait"
+  ],
+  "Extraversion": [
+   "PersonalityTrait"
+  ],
+  "Agreeableness": [
+   "PersonalityTrait"
+  ],
+  "Neuroticism": [
+   "PersonalityTrait"
+  ],
+  "StudentRecord": [],
+  "CounsellingReport": [],
+  "BehaviourObservationRecord": [],
+  "AcademicTranscript": [],
+  "CareerPlan": [],
+  "CounsellingRecommendation": [],
+  "AssessmentReport": [],
+  "ReferralLetter": [],
+  "ConsentForm": [],
+  "CaseNote": [],
+  "CompetencyQuestion": [],
+  "OntologyDocumentation": [],
+  "OntologyVersionRecord": [],
+  "ReasoningReport": [],
+  "AIRecommendation": [],
+  "BehaviouralAnalyticsReport": [],
+  "CounsellingRecord": [],
+  "AcademicRecord": [],
+  "CounsellingGoal": [],
+  "CounsellingOutcome": [],
+  "RiskIndicator": [],
+  "RiskLevel": [],
+  "CareerGuidancePathway": [],
+  "MTSSTier": [],
+  "MindsetsBehaviorsStandard": [],
+  "ResultsReport": [],
+  "LessonPlan": [],
+  "AnnualCalendar": [],
+  "VisionStatement": [],
+  "MissionStatement": [],
+  "ParticipationData": [],
+  "MindsetsBehaviorsData": [],
+  "OutcomeData": [],
+  "Occupation": [],
+  "CareerCluster": [],
+  "ProgrammeOfStudy": [],
+  "Course": [],
+  "Curriculum": [],
+  "LearningResource": [],
+  "Qualification": [],
+  "EnrollmentRecord": [],
+  "GraduationRequirement": [],
+  "CoursePrerequisite": [],
+  "PromotionCriterion": [],
+  "UserProfile": [],
+  "StudentModel": [],
+  "Utterance": [],
+  "UserIntent": [],
+  "SystemResponse": [],
+  "CrisisDetectionAlert": [],
+  "AuditLogEntry": [],
+  "LabourMarketInformation": [],
+  "ConsentCondition": [],
+  "ConfidentialityConstraint": [],
+  "InformedConsent": [
+   "ConsentCondition"
+  ],
+  "GuardianConsent": [
+   "ConsentCondition"
+  ],
+  "StudentSelfConsent": [
+   "ConsentCondition"
+  ],
+  "PlanSpecification": [],
+  "InterventionPlan": [
+   "PlanSpecification"
+  ],
+  "AcademicImprovementPlan": [
+   "PlanSpecification"
+  ],
+  "CareerDevelopmentPlan": [
+   "PlanSpecification"
+  ],
+  "BehaviourInterventionPlan": [
+   "PlanSpecification"
+  ],
+  "CrisisManagementPlan": [
+   "PlanSpecification"
+  ],
+  "FollowUpPlan": [
+   "PlanSpecification"
+  ],
+  "SafetyPlan": [
+   "PlanSpecification"
+  ],
+  "CounsellingPlan": [
+   "PlanSpecification"
+  ],
+  "PostsecondaryPlan": [
+   "PlanSpecification"
+  ],
+  "ClosingTheGapActionPlan": [
+   "PlanSpecification"
+  ],
+  "AnnualStudentOutcomeGoal": [
+   "PlanSpecification"
+  ],
+  "DirectiveInformationEntity": [],
+  "CounsellingGuideline": [
+   "DirectiveInformationEntity"
+  ],
+  "SchoolPolicy": [
+   "DirectiveInformationEntity"
+  ],
+  "ASCAStandardsDocument": [
+   "DirectiveInformationEntity"
+  ],
+  "InterventionProtocol": [
+   "DirectiveInformationEntity"
+  ],
+  "DataProtectionRegulation": [
+   "DirectiveInformationEntity"
+  ],
+  "RecordRetentionPolicy": [
+   "DirectiveInformationEntity"
+  ],
+  "EthicalStandard": [
+   "DirectiveInformationEntity"
+  ],
+  "Dataset": [],
+  "StudentDatabase": [
+   "Dataset"
+  ],
+  "CounsellingKnowledgeBase": [
+   "Dataset"
+  ],
+  "BehaviourDataset": [
+   "Dataset"
+  ],
+  "CareerDataset": [
+   "Dataset"
+  ],
+  "AcademicDataset": [
+   "Dataset"
+  ],
+  "AssessmentInstrument": [],
+  "Questionnaire": [
+   "AssessmentInstrument"
+  ],
+  "ScreeningInstrument": [
+   "AssessmentInstrument"
+  ],
+  "InterestInventory": [
+   "AssessmentInstrument"
+  ],
+  "AptitudeTest": [
+   "AssessmentInstrument"
+  ],
+  "ValuesAssessmentInstrument": [
+   "AssessmentInstrument"
+  ],
+  "PersonalityInventory": [
+   "AssessmentInstrument"
+  ],
+  "MindsetStandard": [
+   "MindsetsBehaviorsStandard"
+  ],
+  "LearningStrategiesBehaviour": [
+   "MindsetsBehaviorsStandard"
+  ],
+  "SelfManagementSkillsBehaviour": [
+   "MindsetsBehaviorsStandard"
+  ],
+  "SocialSkillsBehaviour": [
+   "MindsetsBehaviorsStandard"
+  ],
+  "TierOneSupport": [
+   "MTSSTier"
+  ],
+  "TierTwoSupport": [
+   "MTSSTier"
+  ],
+  "TierThreeSupport": [
+   "MTSSTier"
+  ],
+  "AcademicRiskIndicator": [
+   "RiskIndicator"
+  ],
+  "BehaviouralIndicator": [
+   "RiskIndicator"
+  ],
+  "SocioEmotionalRiskIndicator": [
+   "RiskIndicator"
+  ],
+  "EngagementDecline": [
+   "RiskIndicator"
+  ],
+  "FinancialHardshipIndicator": [
+   "RiskIndicator"
+  ],
+  "DisciplineReferral": [
+   "RiskIndicator"
+  ],
+  "ScreeningFlag": [
+   "RiskIndicator"
+  ],
+  "ChronicAbsence": [
+   "AcademicRiskIndicator"
+  ],
+  "GPADecline": [
+   "AcademicRiskIndicator"
+  ],
+  "SoftwareApplication": [],
+  "IntelligentCounsellingSystem": [
+   "SoftwareApplication"
+  ],
+  "LargeLanguageModel": [
+   "SoftwareApplication"
+  ],
+  "NaturalLanguageUnderstandingComponent": [
+   "SoftwareApplication"
+  ],
+  "DialogueManager": [
+   "SoftwareApplication"
+  ],
+  "IntentClassifier": [
+   "SoftwareApplication"
+  ],
+  "SentimentAnalyser": [
+   "SoftwareApplication"
+  ],
+  "EmotionRecognitionComponent": [
+   "SoftwareApplication"
+  ],
+  "SafetyGuardrail": [
+   "SoftwareApplication"
+  ],
+  "CounsellingChatbot": [
+   "IntelligentCounsellingSystem"
+  ],
+  "ConversationalAgent": [
+   "IntelligentCounsellingSystem"
+  ],
+  "VirtualCounsellingAssistant": [
+   "IntelligentCounsellingSystem"
+  ],
+  "RecommenderSystem": [
+   "IntelligentCounsellingSystem"
+  ],
+  "DecisionSupportSystem": [
+   "IntelligentCounsellingSystem"
+  ],
+  "EarlyWarningSystem": [
+   "IntelligentCounsellingSystem"
+  ],
+  "CounsellingProcess": [],
+  "CounsellingSession": [
+   "CounsellingProcess"
+  ],
+  "Intervention": [
+   "CounsellingProcess"
+  ],
+  "Assessment": [
+   "CounsellingProcess"
+  ],
+  "Referral": [
+   "CounsellingProcess"
+  ],
+  "ProgressMonitoring": [
+   "CounsellingProcess"
+  ],
+  "ClassroomInstruction": [
+   "CounsellingProcess"
+  ],
+  "IntakeInterview": [
+   "CounsellingProcess"
+  ],
+  "ExitInterview": [
+   "CounsellingProcess"
+  ],
+  "FollowUpSession": [
+   "CounsellingProcess"
+  ],
+  "AcademicAdvising": [
+   "CounsellingProcess"
+  ],
+  "MentoringProcess": [
+   "CounsellingProcess"
+  ],
+  "OrientationProgramme": [
+   "CounsellingProcess"
+  ],
+  "PsychoeducationalWorkshop": [
+   "CounsellingProcess"
+  ],
+  "WellnessCheckIn": [
+   "CounsellingProcess"
+  ],
+  "SafetyPlanning": [
+   "CounsellingProcess"
+  ],
+  "MandatedReporting": [
+   "CounsellingProcess"
+  ],
+  "CrisisResponse": [
+   "CounsellingProcess"
+  ],
+  "CaseDocumentation": [
+   "CounsellingProcess"
+  ],
+  "IndividualCounselling": [
+   "CounsellingSession"
+  ],
+  "GroupCounselling": [
+   "CounsellingSession"
+  ],
+  "FamilyCounselling": [
+   "CounsellingSession"
+  ],
+  "CareerCounselling": [
+   "CounsellingSession"
+  ],
+  "CrisisCounselling": [
+   "CounsellingSession"
+  ],
+  "CareerGuidanceSession": [
+   "CounsellingSession"
+  ],
+  "SmallGroupCounselling": [
+   "Intervention"
+  ],
+  "AcademicIntervention": [
+   "Intervention"
+  ],
+  "CareerIntervention": [
+   "Intervention"
+  ],
+  "SocialEmotionalIntervention": [
+   "Intervention"
+  ],
+  "StudySkillsTraining": [
+   "Intervention"
+  ],
+  "CognitiveBehaviouralIntervention": [
+   "Intervention"
+  ],
+  "SolutionFocusedBriefIntervention": [
+   "Intervention"
+  ],
+  "MotivationalInterviewing": [
+   "Intervention"
+  ],
+  "MindfulnessTraining": [
+   "Intervention"
+  ],
+  "PeerSupportProgramme": [
+   "Intervention"
+  ],
+  "AcademicAssessment": [
+   "Assessment"
+  ],
+  "BehaviourAssessment": [
+   "Assessment"
+  ],
+  "PsychologicalAssessment": [
+   "Assessment"
+  ],
+  "CareerAssessment": [
+   "Assessment"
+  ],
+  "CompetencyAssessment": [
+   "Assessment"
+  ],
+  "RiskAssessment": [
+   "Assessment"
+  ],
+  "NeedsAssessment": [
+   "Assessment"
+  ],
+  "PsychosocialAssessment": [
+   "Assessment"
+  ],
+  "SuicideRiskAssessment": [
+   "RiskAssessment"
+  ],
+  "EducationalProcess": [],
+  "Teaching": [
+   "EducationalProcess"
+  ],
+  "Learning": [
+   "EducationalProcess"
+  ],
+  "Examination": [
+   "EducationalProcess"
+  ],
+  "AssignmentSubmission": [
+   "EducationalProcess"
+  ],
+  "CourseRegistration": [
+   "EducationalProcess"
+  ],
+  "Graduation": [
+   "EducationalProcess"
+  ],
+  "ThesisSupervision": [
+   "EducationalProcess"
+  ],
+  "CreditTransfer": [
+   "EducationalProcess"
+  ],
+  "AcademicAppeal": [
+   "EducationalProcess"
+  ],
+  "BehaviouralProcess": [],
+  "ClassroomParticipation": [
+   "BehaviouralProcess"
+  ],
+  "SchoolAttendance": [
+   "BehaviouralProcess"
+  ],
+  "SocialInteraction": [
+   "BehaviouralProcess"
+  ],
+  "PeerCollaboration": [
+   "BehaviouralProcess"
+  ],
+  "BullyingIncident": [
+   "BehaviouralProcess"
+  ],
+  "ConflictResolution": [
+   "BehaviouralProcess"
+  ],
+  "EmotionEpisode": [],
+  "AppraisalProcess": [],
+  "StressResponse": [],
+  "CopingProcess": [],
+  "EmotionRegulation": [],
+  "FearEpisode": [
+   "EmotionEpisode"
+  ],
+  "JoyEpisode": [
+   "EmotionEpisode"
+  ],
+  "SadnessEpisode": [
+   "EmotionEpisode"
+  ],
+  "AngerEpisode": [
+   "EmotionEpisode"
+  ],
+  "AnxietyEpisode": [
+   "EmotionEpisode"
+  ],
+  "CareerProcess": [],
+  "CareerExploration": [
+   "CareerProcess"
+  ],
+  "CareerPlanning": [
+   "CareerProcess"
+  ],
+  "SkillDevelopment": [
+   "CareerProcess"
+  ],
+  "JobSearch": [
+   "CareerProcess"
+  ],
+  "CareerDecisionMaking": [
+   "CareerProcess"
+  ],
+  "WorkBasedLearning": [
+   "CareerProcess"
+  ],
+  "EmploymentPreparation": [
+   "CareerProcess"
+  ],
+  "Internship": [
+   "WorkBasedLearning"
+  ],
+  "JobShadowing": [
+   "WorkBasedLearning"
+  ],
+  "ServiceLearning": [
+   "WorkBasedLearning"
+  ],
+  "Apprenticeship": [
+   "WorkBasedLearning"
+  ],
+  "CooperativeEducation": [
+   "WorkBasedLearning"
+  ],
+  "AdministrativeProcess": [],
+  "StudentRegistration": [
+   "AdministrativeProcess"
+  ],
+  "RecordManagement": [
+   "AdministrativeProcess"
+  ],
+  "ReportGeneration": [
+   "AdministrativeProcess"
+  ],
+  "PolicyReview": [
+   "AdministrativeProcess"
+  ],
+  "AnnualAdministrativeConference": [
+   "AdministrativeProcess"
+  ],
+  "UseOfTimeAssessment": [
+   "AdministrativeProcess"
+  ],
+  "AIProcess": [],
+  "OntologyPopulation": [
+   "AIProcess"
+  ],
+  "KnowledgeExtraction": [
+   "AIProcess"
+  ],
+  "NLPProcessing": [
+   "AIProcess"
+  ],
+  "EntityRecognition": [
+   "AIProcess"
+  ],
+  "SemanticAnnotation": [
+   "AIProcess"
+  ],
+  "OntologyAlignment": [
+   "AIProcess"
+  ],
+  "ReasoningProcess": [
+   "AIProcess"
+  ],
+  "QueryEvaluation": [
+   "AIProcess"
+  ],
+  "DialogueInteraction": [
+   "AIProcess"
+  ],
+  "IntentRecognition": [
+   "AIProcess"
+  ],
+  "SentimentAnalysis": [
+   "AIProcess"
+  ],
+  "EmotionRecognition": [
+   "AIProcess"
+  ],
+  "RiskDetection": [
+   "AIProcess"
+  ],
+  "RecommendationGeneration": [
+   "AIProcess"
+  ],
+  "EscalationToHuman": [
+   "AIProcess"
+  ],
+  "HumanInTheLoopReview": [
+   "AIProcess"
+  ],
+  "HyperTableauConstruction": [
+   "ReasoningProcess"
+  ],
+  "DevelopmentalTrajectory": [],
+  "AcademicYear": [
+   "ProperInterval"
+  ],
+  "Semester": [
+   "ProperInterval"
+  ],
+  "SchoolTerm": [
+   "ProperInterval"
+  ],
+  "CounsellingAppointment": [
+   "ProperInterval"
+  ],
+  "AssessmentPeriod": [
+   "ProperInterval"
+  ],
+  "ExaminationPeriod": [
+   "ProperInterval"
+  ],
+  "InterventionPeriod": [
+   "ProperInterval"
+  ],
+  "ObservationPeriod": [
+   "ProperInterval"
+  ],
+  "FollowUpInterval": [
+   "ProperInterval"
+  ],
+  "SessionStart": [],
+  "SessionEnd": [],
+  "InterventionStart": [],
+  "InterventionCompletion": [],
+  "ExaminationStart": [],
+  "ExaminationEnd": [],
+  "GraduationDate": [],
+  "AtRiskStudent": [],
+  "ChronicallyAbsentStudent": [],
+  "HighRiskStudent": [],
+  "StudentReceivingTieredSupport": [],
+  "RecommendedIntervention": [],
+  "KnowledgeGroundedCounsellingSystem": [],
+  "AttendanceRiskIndicator": [
+   "RiskIndicator"
+  ],
+  "BehaviouralRiskIndicator": [
+   "RiskIndicator"
+  ],
+  "FinancialNeedAssessment": [
+   "Assessment"
+  ],
+  "FinancialAidAward": [],
+  "ScholarshipAward": [
+   "FinancialAidAward"
+  ],
+  "WorkStudyAward": [
+   "FinancialAidAward"
+  ],
+  "StudentLoanAward": [
+   "FinancialAidAward"
+  ],
+  "FinancialIntervention": [
+   "Intervention"
+  ],
+  "EmotionalIntelligenceAssessment": [
+   "PsychologicalAssessment"
+  ],
+  "SuicideRiskScreening": [
+   "SuicideRiskAssessment"
+  ],
+  "SelfManagementIntervention": [
+   "SocialEmotionalIntervention"
+  ],
+  "TutoringService": [],
+  "SpecialEducationEvaluation": [
+   "Assessment"
+  ],
+  "CrisisEvent": [],
+  "InstitutionalRole": [],
+  "CareerReadinessGap": [],
+  "ApplicationMilestone": [],
+  "AcademicProgramme": [],
+  "AcademicStanding": [],
+  "GoodStanding": [
+   "AcademicStanding"
+  ],
+  "DeansListStanding": [
+   "AcademicStanding"
+  ],
+  "ProbationStanding": [
+   "AcademicStanding"
+  ],
+  "ResearchInterestArea": [],
+  "CapstoneProject": [],
+  "TechInternship": [
+   "Internship"
+  ]
+ },
+ "object_properties": [
+  "addresses",
+  "addressesStandard",
+  "advisedBy",
+  "alignsWithOccupation",
+  "assignedTier",
+  "basedOnAssessment",
+  "belongsToCluster",
+  "concernsStudent",
+  "conductedBy",
+  "developsSkill",
+  "documentedIn",
+  "enrolledIn",
+  "enrolledInProgramme",
+  "escalatesTo",
+  "escalatesToHuman",
+  "followsPathway",
+  "governedBy",
+  "groundedIn",
+  "groundedInKB",
+  "hasAcademicStanding",
+  "hasAuditEntry",
+  "hasBeginning",
+  "hasConsentCondition",
+  "hasDetectedIntent",
+  "hasEmotionProcess",
+  "hasEnd",
+  "hasGoal",
+  "hasOutcome",
+  "hasRecommendedIntervention",
+  "hasResearchInterest",
+  "hasRiskIndicator",
+  "hasRiskLevel",
+  "hasStudentModel",
+  "hasStudentRiskLevel",
+  "hasSystemResponse",
+  "indicatesIssue",
+  "interactsWithSystem",
+  "isAddressedBy",
+  "isRiskIndicatorOf",
+  "mandatedReportTo",
+  "mentoredBy",
+  "modelsStudent",
+  "occursDuring",
+  "offersProgramme",
+  "partOfTrajectory",
+  "participatesInSession",
+  "precedes",
+  "prerequisiteOf",
+  "producesUtterance",
+  "receivesAward",
+  "recommendedFor",
+  "recommendsIntervention",
+  "requiresSkill",
+  "takesCourse",
+  "targetsDomain",
+  "triggersAlert",
+  "usesModel",
+  "worksOnProject"
+ ],
+ "data_properties": [
+  "hasAgreeablenessScore",
+  "hasAttendanceRateValue",
+  "hasAwardAmount",
+  "hasConscientiousnessScore",
+  "hasConsentDate",
+  "hasCreditsEarned",
+  "hasDeliveryMode",
+  "hasEFCAmount",
+  "hasEmotionRegulationScore",
+  "hasEvidenceBase",
+  "hasExpectedDurationWeeks",
+  "hasExtraversionScore",
+  "hasFollowUpDate",
+  "hasGradeLevel",
+  "hasGradePointAverageValue",
+  "hasISCEDLevel",
+  "hasIdeationLevel",
+  "hasIncomeBracketValue",
+  "hasIntentConfidence",
+  "hasNeuroticismScore",
+  "hasONetSocCode",
+  "hasOpennessScore",
+  "hasOthersEmotionAppraisalScore",
+  "hasResponseText",
+  "hasRetentionPeriodMonths",
+  "hasRiskScore",
+  "hasScore",
+  "hasSelfEmotionAppraisalScore",
+  "hasSentimentScore",
+  "hasSessionDate",
+  "hasSeverityLevel",
+  "hasTimestamp",
+  "hasUnmetNeedAmount",
+  "hasUseOfEmotionScore",
+  "hasUtteranceText",
+  "hasWorkStudyHours"
+ ],
+ "inverses": [
+  [
+   "addresses",
+   "isAddressedBy"
+  ],
+  [
+   "hasRecommendedIntervention",
+   "recommendedFor"
+  ],
+  [
+   "hasRiskIndicator",
+   "isRiskIndicatorOf"
+  ]
+ ],
+ "transitive": [
+  "partOfTrajectory",
+  "precedes"
+ ],
+ "property_chain": {
+  "head": "hasStudentRiskLevel",
+  "chain": [
+   "hasRiskIndicator",
+   "hasRiskLevel"
+  ]
+ },
+ "individuals_fixed": {}
+}
