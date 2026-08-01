@@ -1,0 +1,24 @@
+# S-CQ10 (Social-emotional domain)
+# Competency question: Which referrals to community mental-health providers extend support beyond the short-term counselling remit of the school counsellor?
+# Classes used: CommunityMentalHealthProvider, Referral
+# Properties used: concernsStudent, escalatesTo, hasFollowUpDate
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?referral ?student ?provider ?followUp
+WHERE {
+  ?referral rdf:type scon:Referral .
+  ?referral scon:concernsStudent ?student .
+  ?referral scon:escalatesTo ?provider .
+  ?provider rdf:type scon:CommunityMentalHealthProvider .
+  OPTIONAL { ?referral scon:hasFollowUpDate ?followUp . }
+}
+ORDER BY ?student
