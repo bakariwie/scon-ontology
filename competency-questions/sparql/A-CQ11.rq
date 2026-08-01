@@ -1,0 +1,26 @@
+# A-CQ11 (Academic domain)
+# Competency question: Which referrals to academic support services follow from an identified academic concern, and what is the escalation pathway?
+# Classes used: AcademicIssue, Referral
+# Properties used: concernsStudent, escalatesTo, hasFollowUpDate, hasSeverityLevel, indicatesIssue
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?referral ?student ?issue ?target ?level ?followUp
+WHERE {
+  ?referral rdf:type scon:Referral .
+  ?referral scon:concernsStudent ?student .
+  ?referral scon:indicatesIssue ?issue .
+  ?issue rdf:type scon:AcademicIssue .
+  ?referral scon:escalatesTo ?target .
+  ?referral scon:hasSeverityLevel ?level .
+  OPTIONAL { ?referral scon:hasFollowUpDate ?followUp . }
+}
+ORDER BY ?level ?referral
