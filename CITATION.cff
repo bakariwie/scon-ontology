@@ -1,0 +1,36 @@
+cff-version: 1.1.0
+message: "If you use SCON, please cite it using these metadata."
+title: "SCON: School Counselling Ontology Network"
+abstract: >-
+  SCON is a modular, BFO-grounded OWL 2 DL ontology for comprehensive counselling across
+  the academic, career, and social-emotional domains in school and higher-education
+  settings. It comprises 472 classes, 56 object properties and 36 data properties across
+  9 modules, with a textual definition on every primitive class, six defined classes
+  placed by the reasoner, and 36 competency questions embedded as machine-readable
+  annotations. It is released with a synthetic validation dataset of 1,000 de-identified
+  students and an executable SPARQL suite.
+type: software
+version: 1.1.0
+date-released: "2026-06-01"
+license: CC-BY-4.0
+repository-code: "https://github.com/bakariwie/scon-ontology"
+url: "https://github.com/bakariwie/scon-ontology"
+keywords:
+  - ontology engineering
+  - OWL 2 DL
+  - description logics
+  - Basic Formal Ontology
+  - school counselling
+  - higher education
+  - competency questions
+  - FAIR principles
+authors:
+  - family-names: Bakariwie
+    given-names: Amiru
+    affiliation: "SD Dombo University of Business and Integrated Development Studies, Wa, Ghana"
+  - family-names: Weyori
+    given-names: Benjamin Asubam
+    affiliation: "University of Energy and Natural Resources, Sunyani, Ghana"
+  - family-names: Afriyie
+    given-names: Yaw
+    affiliation: "SD Dombo University of Business and Integrated Development Studies, Wa, Ghana"
