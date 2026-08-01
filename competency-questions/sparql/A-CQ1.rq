@@ -1,0 +1,28 @@
+# A-CQ1 (Academic domain)
+# Competency question: Which ASCA Mindsets and Behaviors standards in the academic domain are prioritised by the programme's annual student outcome goals for a given grade level?
+# Classes used: AcademicDevelopment, AnnualStudentOutcomeGoal
+# Properties used: addressesStandard, hasGradeLevel, targetsDomain
+# NOTE: the domain is matched by type rather than by naming the
+# individual directly, so the query parses even where the ontology
+# puns the domain name as both a class and an individual.
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?goal ?grade ?standard ?standardLabel
+WHERE {
+  ?goal rdf:type scon:AnnualStudentOutcomeGoal .
+  ?goal scon:targetsDomain ?domain .
+  ?domain rdf:type scon:AcademicDevelopment .
+  ?goal scon:hasGradeLevel ?grade .
+  ?goal scon:addressesStandard ?standard .
+  ?standard rdfs:label ?standardLabel .
+}
+ORDER BY ?grade ?goal
