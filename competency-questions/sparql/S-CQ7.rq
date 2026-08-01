@@ -1,0 +1,27 @@
+# S-CQ7 (Social-emotional domain)
+# Competency question: Which consent conditions and confidentiality constraints govern access to, and disclosure of, a student's counselling record?
+# Classes used: ConfidentialityConstraint, CounsellingRecord
+# Properties used: concernsStudent, governedBy, hasConsentCondition, hasRetentionPeriodMonths
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?record ?student ?condition ?conditionLabel ?constraint ?rule ?retentionMonths
+WHERE {
+  ?record rdf:type scon:CounsellingRecord .
+  ?record scon:concernsStudent ?student .
+  ?record scon:hasConsentCondition ?condition .
+  ?condition rdfs:label ?conditionLabel .
+  ?record scon:governedBy ?constraint .
+  ?constraint rdf:type scon:ConfidentialityConstraint .
+  ?constraint rdfs:label ?rule .
+  OPTIONAL { ?record scon:hasRetentionPeriodMonths ?retentionMonths . }
+}
+ORDER BY ?student
