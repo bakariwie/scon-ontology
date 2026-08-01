@@ -1,0 +1,25 @@
+# S-CQ8 (Social-emotional domain)
+# Competency question: Which crisis-response procedures apply to a given crisis type, and which institutional roles participate in the response?
+# Classes used: CrisisEvent, CrisisResponse
+# Properties used: addresses, conductedBy
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?procedure ?procedureLabel ?crisis ?crisisLabel ?participant
+WHERE {
+  ?procedure rdf:type scon:CrisisResponse .
+  ?procedure rdfs:label ?procedureLabel .
+  ?procedure scon:addresses ?crisis .
+  ?crisis rdf:type scon:CrisisEvent .
+  ?crisis rdfs:label ?crisisLabel .
+  ?procedure scon:conductedBy ?participant .
+}
+ORDER BY ?crisis
