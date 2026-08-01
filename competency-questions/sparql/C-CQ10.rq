@@ -1,0 +1,24 @@
+# C-CQ10 (Career domain)
+# Competency question: Which college- and career-application milestones has a student completed or missed?
+# Classes used: ApplicationMilestone
+# Properties used: concernsStudent, hasFollowUpDate, hasOutcome
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?student ?milestone ?milestoneLabel ?dueDate ?outcome
+WHERE {
+  ?milestone rdf:type scon:ApplicationMilestone .
+  ?milestone scon:concernsStudent ?student .
+  ?milestone rdfs:label ?milestoneLabel .
+  ?milestone scon:hasFollowUpDate ?dueDate .
+  ?milestone scon:hasOutcome ?outcome .
+}
+ORDER BY ?student ?dueDate
