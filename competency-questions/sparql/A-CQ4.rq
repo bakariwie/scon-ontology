@@ -1,0 +1,27 @@
+# A-CQ4 (Academic domain)
+# Competency question: Which classroom lessons (Tier 1 instruction) address a given academic Mindsets and Behaviors standard, and in which grade levels are they delivered?
+# Classes used: AcademicDevelopment, ClassroomInstruction
+# Properties used: addressesStandard, hasGradeLevel, targetsDomain
+# NOTE: the domain is matched by type rather than by naming the
+# individual directly, so the query parses even where the ontology
+# puns the domain name as both a class and an individual.
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?lesson ?standard ?grade
+WHERE {
+  ?lesson rdf:type scon:ClassroomInstruction .
+  ?lesson scon:targetsDomain ?domain .
+  ?domain rdf:type scon:AcademicDevelopment .
+  ?lesson scon:addressesStandard ?standard .
+  ?lesson scon:hasGradeLevel ?grade .
+}
+ORDER BY ?standard ?grade
