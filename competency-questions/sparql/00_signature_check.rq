@@ -1,0 +1,45 @@
+# 00_signature_check.rq  —  LOAD CHECK (run this first)
+#
+# Purpose: confirm in one query that the ontology and the validation dataset are
+# both loaded and that the reasoner is running.
+# It touches a class, an object property, a data property and a reasoner-visible
+# assertion, so a non-empty result means the whole stack is live.
+#
+# WHAT TO EXPECT
+#   Several hundred rows. Each row is a student with at least one recorded risk
+#   indicator, the level of that indicator, and the student's assigned tier.
+#
+#   No rows at all means one of the following, in order of likelihood:
+#     1. the reasoner has not been started (Reasoner > HermiT > Start reasoner);
+#     2. the dataset was not added (Active Ontology tab > Direct Imports > plus);
+#     3. a term is spelled differently in your copy of SCON.
+#
+# For the FULL term-by-term signature check across all 36 queries, do not use
+# SPARQL. Protege's Snap SPARQL parser is too restricted for it. Run instead:
+#
+#     python tools/verify_release.py "scon-ontology v1.1.0.rdf" --signature
+#
+# which checks every class and property the suite relies on and names any that
+# are missing from your ontology.
+#
+# COMPATIBILITY NOTE
+#   Snap SPARQL accepts a restricted grammar. It does NOT support VALUES, and it
+#   rejects aggregates (COUNT, GROUP BY) and property paths. It does support
+#   OPTIONAL, FILTER, BIND, UNION, MINUS and ORDER BY. Every query in this suite
+#   is written inside that subset and uses explicit rdf:type rather than the `a`
+#   shorthand.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?student ?indicator ?level ?tier
+WHERE {
+  ?student rdf:type scon:Student .
+  ?student scon:hasRiskIndicator ?indicator .
+  ?indicator scon:hasRiskLevel ?level .
+  OPTIONAL { ?student scon:assignedTier ?tier . }
+}
+ORDER BY ?student
