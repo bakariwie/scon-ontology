@@ -1,0 +1,27 @@
+# C-CQ9 (Career domain)
+# Competency question: How is a student's progression along a career-guidance pathway monitored across grade-level transitions?
+# Classes used: AcademicAdvising, PostsecondaryPlan, Student
+# Properties used: followsPathway, hasGoal, hasGradeLevel, hasSessionDate, participatesInSession
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?student ?grade ?plan ?pathway ?revisionSession ?sessionDate
+WHERE {
+  ?student rdf:type scon:Student .
+  ?student scon:hasGradeLevel ?grade .
+  ?student scon:hasGoal ?plan .
+  ?plan rdf:type scon:PostsecondaryPlan .
+  ?plan scon:followsPathway ?pathway .
+  OPTIONAL { ?student scon:participatesInSession ?revisionSession .
+             ?revisionSession rdf:type scon:AcademicAdvising .
+             ?revisionSession scon:hasSessionDate ?sessionDate . }
+}
+ORDER BY ?student ?sessionDate
