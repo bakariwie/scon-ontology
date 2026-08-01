@@ -1,0 +1,42 @@
+{
+ "version": "1.1.0",
+ "classes": 472,
+ "classes_with_definition": 466,
+ "defined_classes": 6,
+ "external_classes_reused": 19,
+ "object_properties": 56,
+ "object_properties_incl_reused": 63,
+ "data_properties": 36,
+ "annotation_properties": 5,
+ "individuals": 21,
+ "subclass_axioms": 483,
+ "disjoint_groupings": 8,
+ "all_different": 1,
+ "property_chains": 1,
+ "inverse_axioms": 4,
+ "functional_properties": 13,
+ "transitive_properties": 2,
+ "restrictions": 12,
+ "some_values_from": 11,
+ "has_value": 1,
+ "competency_questions": 36,
+ "labels": 626,
+ "see_also": 25,
+ "modules": {
+  "core": 243,
+  "social-emotional": 53,
+  "intelligent-systems": 37,
+  "academic": 30,
+  "risk-safeguarding": 29,
+  "career": 26,
+  "governance": 20,
+  "higher-education": 18,
+  "temporal": 16
+ },
+ "module_count": 9,
+ "provenance": {
+  "author": 377,
+  "llm": 59,
+  "reused": 36
+ }
+}
