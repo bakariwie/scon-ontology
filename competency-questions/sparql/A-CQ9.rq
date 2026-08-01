@@ -1,0 +1,29 @@
+# A-CQ9 (Academic domain)
+# Competency question: How is progress towards an annual student outcome goal in the academic domain measured across the delivered activities?
+# Classes used: AcademicDevelopment, AnnualStudentOutcomeGoal, ResultsReport
+# Properties used: documentedIn, hasScore, targetsDomain
+# NOTE: the domain is matched by type rather than by naming the
+# individual directly, so the query parses even where the ontology
+# puns the domain name as both a class and an individual.
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?goal ?goalLabel ?report ?outcomeScore
+WHERE {
+  ?goal rdf:type scon:AnnualStudentOutcomeGoal .
+  ?goal scon:targetsDomain ?domain .
+  ?domain rdf:type scon:AcademicDevelopment .
+  ?goal rdfs:label ?goalLabel .
+  ?goal scon:documentedIn ?report .
+  ?report rdf:type scon:ResultsReport .
+  ?report scon:hasScore ?outcomeScore .
+}
+ORDER BY ?goal
