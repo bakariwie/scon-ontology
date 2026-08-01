@@ -1,0 +1,41 @@
+{
+  "title": "SCON: School Counselling Ontology Network",
+  "description": "<p>SCON is a modular, BFO-grounded OWL 2 DL ontology for comprehensive counselling across the academic, career, and social-emotional domains in school and higher-education settings, engineered to support intelligent counselling systems.</p><p>The release comprises 472 classes (6 of them defined classes placed by the reasoner), 56 object properties declared for the domain, 36 data properties, 483 subclass axioms, a textual IAO:0000115 definition on every primitive class, 8 disjointness groupings, one property chain, 11 existential restrictions and one nominal restriction, distributed across 9 machine-readable modules, at expressivity SROIF(D) within the SROIQ(D) bound of OWL 2 DL. Fourteen Basic Formal Ontology classes are imported under their OBO PURLs, alongside terms from the Information Artifact Ontology, the Ontology for Biomedical Investigations, the Emotion Ontology and the W3C Time Ontology. Thirty-six competency questions are embedded as annotations, each with an executable SPARQL query.</p><p>The release includes a synthetic validation dataset of 18,236 de-identified individuals built around 1,000 students, 500 pre-tertiary and 500 tertiary. No real or identifiable student data are present in any file.</p>",
+  "upload_type": "software",
+  "version": "1.1.0",
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "ontology engineering",
+    "OWL 2 DL",
+    "description logics",
+    "Basic Formal Ontology",
+    "school counselling",
+    "higher education",
+    "competency questions",
+    "neuro-symbolic",
+    "FAIR principles"
+  ],
+  "creators": [
+    {
+      "name": "Bakariwie, Amiru",
+      "affiliation": "SD Dombo University of Business and Integrated Development Studies, Wa, Ghana"
+    },
+    {
+      "name": "Weyori, Benjamin Asubam",
+      "affiliation": "University of Energy and Natural Resources, Sunyani, Ghana"
+    },
+    {
+      "name": "Afriyie, Yaw",
+      "affiliation": "SD Dombo University of Business and Integrated Development Studies, Wa, Ghana"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/bakariwie/scon-ontology",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
