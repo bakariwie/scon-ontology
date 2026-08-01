@@ -1,0 +1,24 @@
+# S-CQ4 (Social-emotional domain)
+# Competency question: Which short-term, small-group counselling interventions address an identified social/emotional concern, and what is their evidence base?
+# Classes used: SocialEmotionalIntervention
+# Properties used: hasEvidenceBase, hasExpectedDurationWeeks
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?intervention ?title ?evidence ?durationWeeks
+WHERE {
+  ?intervention rdf:type scon:SocialEmotionalIntervention .
+  ?intervention rdfs:label ?title .
+  ?intervention scon:hasEvidenceBase ?evidence .
+  ?intervention scon:hasExpectedDurationWeeks ?durationWeeks .
+  FILTER (?durationWeeks <= 10)
+}
+ORDER BY ?intervention
