@@ -1,0 +1,24 @@
+# C-CQ5 (Career domain)
+# Competency question: Which work-based learning experiences has a student completed, and which standards do they evidence?
+# Classes used: Student, WorkBasedLearning
+# Properties used: addressesStandard, participatesInSession
+# Execute in the Protege Snap SPARQL tab AFTER running the HermiT reasoner:
+# the query is answered over the inferred model, so derived types
+# (AtRiskStudent, HighRiskStudent, RecommendedIntervention), inverse
+# properties, transitive closures, and the hasStudentRiskLevel chain
+# are all visible to it.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX scon: <http://www.semanticweb.org/bakariwie/ontologies/2026/6/scon-ontology-1#>
+
+SELECT DISTINCT ?student ?experience ?experienceLabel ?standard
+WHERE {
+  ?student rdf:type scon:Student .
+  ?student scon:participatesInSession ?experience .
+  ?experience rdf:type scon:WorkBasedLearning .
+  ?experience rdfs:label ?experienceLabel .
+  ?experience scon:addressesStandard ?standard .
+}
+ORDER BY ?student
